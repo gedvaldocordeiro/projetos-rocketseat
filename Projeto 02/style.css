@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Mulish&family=Open+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --cor01: #89C5CC;
+    --cor02: #1F1534;
+    --cor03: #7D7987;
+    --cor04: #69B99D;
+    --font01: 'Mulish', sans-serif;
+    --font02: 'Open Sans', sans-serif;
+    --font03: 'DM Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 1000px;
+    max-height: 100vh;
+    margin: 0 auto;
+    padding-top: 65px;
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 80.83%, rgba(227, 255, 248, 0.38) 98.75%);
+}
+
+div#menu{
+    display: flex;
+    justify-content: space-between;
+    height: 23px;
+    align-items: flex-end;
+}
+
+div#menu ul{
+    list-style: none;
+    display: flex;
+    gap: 48px;
+    font: 400 18px var(--font02);
+    color: var(--cor02);
+}
+
+div#menu a{
+    text-decoration: none;
+    color: black;
+}
+
+div#menu a:hover{
+    text-decoration: underline;
+    color: #69B99D;
+}
+
+main{
+    margin: 58px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#text h1{
+    padding: 20px;
+    font: 500 49px var(--font01);
+    width: 489px;
+}
+
+div#text span{
+    color: var(--cor04);
+}
+
+div#text p{
+    margin: 40px 0;
+    width: 438px;
+    font: 400 14px var(--font02);
+    color: var(--cor03);
+    line-height: 28px;
+    padding-left: 20px;
+}
+
+button{
+    margin: 40px 20px;
+    background-color: var(--cor04);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    border-style: none;
+    border-radius: 4px;
+}
+
+button > a{
+    padding: 14px 32px 14px 0px;
+    text-decoration: none;
+    color: white;
+    font: 400 16px var(--font03);
+}
+
+button > img{
+    padding: 14px 0 14px 32px;
+}
+
+button:hover{
+    background-color: #65cca6;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    margin: 100px auto;
+}
+
+footer > p{
+    font: 400 14px var(--font02);
+    text-align: center;
+    width: 999px;
+    line-height: 28px;
+}
+
+footer > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+footer > p > a:hover{
+    text-decoration: underline;
+    color: var(--cor04);
+}
+
+#balls> img{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
