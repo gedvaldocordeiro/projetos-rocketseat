@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AVALIE A SUA MENTORIA</h1>
+        <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+    </header>
+    <main>
+        <form id="my-form">
+            <fieldset>
+                <div id="info-pessoal">
+                    <legend>Informações Pessoais</legend>
+                    <div id="username">
+                        <div class="dados">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" required placeholder="Ex: João">
+                        </div>
+                        <div class="dados">
+                            <label for="surname">Sobrenome</label>
+                            <input type="text" id="surname" required placeholder="Ex: Silva">
+                        </div>
+                    </div>
+                    <div id="useremail">
+                        <div class="dados">
+                            <label for="email">Email <span>(digite um email válido)</span></label>
+                            <input type="email" id="email" placeholder="Ex: usuário@gmail.com">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div id="info-mentor">
+                    <legend>Informações do Mentor</legend>
+                    <div class="dados">
+                        <label for="nome-mentor">Selecione quem foi o seu mentor</label>
+                        <select id="nome-mentor">
+                            <option value="Oscar">Oscar Niemeyer</option>
+                            <option value="Fernando">Fernando Pessoa</option>
+                            <option value="Machado">Machado de Assis</option>
+                            <option value="Lispector">Clarice Lispector</option>
+                        </select>
+                    </div>
+                    <div class="dados">
+                        <label for="feedback">Feedback sobre o mentor</label>
+                        <textarea id="feedback"></textarea>
+                    </div>
+                    <div class="campo-chec">
+                        <input type="checkbox" id="duvidas">
+                        <label for="duvidas">Todas as minhas dúvidas foram esclarecidas na mentoria.</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div id="proxima-mentoria">
+                    <legend>Agende a sua Próxima mentoria</legend>
+                    <div class="data">
+                        <div class="dados">
+                            <label for="data-evento">Data <span>(DD/MM/AAAA)</span></label>
+                            <input type="date" id="data-evento">
+                        </div>
+                        <div class="dados">
+                            <label for="inicio">Das</label>
+                            <input type="time" id="inicio">
+                        </div>
+                        <div class="dados">
+                            <label for="fim">Até</label>
+                            <input type="time" id="fim">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <input type="submit" value="Salvar" form="my-form" class="button">
+    </footer>
+</body>
+</html>
