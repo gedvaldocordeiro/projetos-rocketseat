@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400;500;600;700&family=Staatliches&display=swap');
+
+:root{
+    font-size: 62.5%;
+    --SizeH1: clamp(3rem, 0.5rem + 3vw, 4rem);
+    --SizeH2: clamp(1.6rem, 2rem, 2.2rem);
+    --SizeText: clamp(1.4rem, 1.6rem, 2rem);
+    --fontPalanquin: 'Palanquin', sans-serif;
+    --fontStaatlinches: 'Staatliches', cursive;
+
+    --hue: 250;
+    --cor01: hsl(232, 17%, 35%);
+    --cor02: hsl(218, 17%, 62%);
+    --cor03: hsl(275, 18%, 79%);
+    --cor04: hsl(0, 0%, 95%);
+    --cor05: hsl(274, 84%, 12%);
+    --cor06: hsla(232, 17%, 35%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 28rem;
+    background: var(--cor02);
+    display: grid;
+    justify-items: center;
+}
+
+header img{
+    padding-top: 2.5rem;
+}
+
+header h1{
+    width: 100%;
+    height: 4rem;
+    background-color: var(--cor03);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    font: 400 var(--SizeH1) var(--fontStaatlinches);
+    color: var(--cor04);
+    line-height: 3.4rem;
+    letter-spacing: 4px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);  
+}
+
+main{
+    max-width: 33rem;
+    margin: 0 auto 6rem;
+    padding: 1.5rem 1rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--cor04);
+}
+
+.text > p{
+    font: 400 var(--SizeText) var(--fontPalanquin);
+    text-align: center;
+    line-height: 2.2rem;
+    color: var(--cor05);
+}
+
+section{
+    display: grid;
+    gap: 3.6rem;
+    margin-top: 4rem;
+}
+
+.card{
+    display: grid;
+    justify-items: end;
+    position: relative;
+}
+
+.card > h2{
+    font: 400 var(--SizeH2) var(--fontStaatlinches);
+    text-align: center;
+    line-height: 3.4rem;
+    letter-spacing: 2px;
+    color: var(--cor06);
+
+    width: 11rem;
+    border-radius: 2rem;
+    background-color: var(--cor04);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.card > img{
+   width: 100%;
+   height: 45rem;
+   object-fit: cover;
+   border-radius: 2rem;
+}
+
+section > div:first-child > img, section > div:nth-child(3)  > img{
+    height: 30rem;
+}
+
+section > div:nth-child(2)  > img, section > div:nth-child(4)  > img{
+    height: 45rem;
+}
+
+
+/*ANIMAÇÃO*/
+
+@keyframes downtop {
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+    0%{
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section > div{
+    animation: downtop 700ms 500ms backwards;
+}
+
+section > div > h2{
+    animation: topdown 700ms 1.2s backwards;
+}
